@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#6b3b00","tertiary-container":"#c98034","on-tertiary":"#4b2800","tertiary-fixed":"#ffdcbf","on-tertiary-fixed":"#2d1600","primary-fixed-dim":"#bac3ff","outline-variant":"#444655","primary":"#bac3ff","primary-fixed":"#dee0ff","surface":"#0e131f","on-error-container":"#ffdad6","on-primary-container":"#001a7f","on-secondary":"#00382f","on-error":"#690005","tertiary":"#ffb874","outline":"#8e8fa1","secondary-container":"#00c1a7","surface-dim":"#0e131f","surface-tint":"#bac3ff","inverse-on-surface":"#2b303d","error":"#ffb4ab","secondary-fixed-dim":"#41ddc2","on-primary-fixed-variant":"#002fc9","on-secondary-fixed":"#00201b","inverse-surface":"#dee2f3","surface-container-lowest":"#090e1a","on-surface-variant":"#c5c5d8","surface-container":"#1a1f2c","surface-variant":"#303542","surface-bright":"#343946","secondary":"#41ddc2","surface-container-low":"#161b28","background":"#0e131f","on-secondary-fixed-variant":"#005045","tertiary-fixed-dim":"#ffb874","on-primary-fixed":"#00105b","primary-container":"#7287ff","surface-container-high":"#252a37","on-surface":"#dee2f3","on-secondary-container":"#00483e","error-container":"#93000a","inverse-primary":"#2d4ce2","on-tertiary-container":"#412200","on-background":"#dee2f3","surface-container-highest":"#303542","secondary-fixed":"#65fade","on-primary":"#001f90"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{gutter:"1.25rem","gutter-lg":"1.75rem","space-lg":"1.5rem","margin-lg":"2.5rem","space-md":"1rem",margin:"1rem","margin-md":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2.5rem"},fontFamily:{"body-lg":["Hanken Grotesk"],"label-code-sm":["JetBrains Mono"],"label-code-lg":["JetBrains Mono"],"display-hero":["Space Grotesk"],"headline-lg":["Space Grotesk"],"label-ui":["Hanken Grotesk"],"body-md":["Hanken Grotesk"],"headline-sm":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-sm":["Hanken Grotesk"],"display-hero-mobile":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"]},fontSize:{"body-lg":["16px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"400"}],"label-code-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"500"}],"label-code-lg":["13px",{lineHeight:"18px",letterSpacing:"0.02em",fontWeight:"500"}],"display-hero":["44px",{lineHeight:"52px",letterSpacing:"-0.03em",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-ui":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"22px",letterSpacing:"0em",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}],"display-hero-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg-mobile":["22px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-50 flex items-center justify-between px-margin-lg shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><div class="bg-primary-container px-space-xs py-0.5 rounded text-on-primary-container font-label-code-sm text-label-code-sm font-bold tracking-wider">NBCU</div><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">PartnerMatch AI</span></div><div class="h-4 w-px bg-surface-variant mx-space-xs hidden sm:block"></div><span class="font-body-sm text-body-sm text-on-surface-variant hidden lg:inline-block">NBCUniversal Film × Brand Partnership Assistant</span></div><div class="flex items-center gap-space-lg"><nav class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-xl" data-active-classes="bg-surface-container-high text-primary font-label-ui text-label-ui rounded-xl"><a class="px-space-md py-1.5 rounded-xl font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="brand-matching" href="#">Brand Matching 品牌匹配</a><a aria-current="page" class="px-space-md py-1.5 transition-colors bg-surface-container-high text-primary font-label-ui text-label-ui rounded-xl" data-path="competitor-tracker" href="#">Competitor Tracker 竞品动态</a><a class="px-space-md py-1.5 rounded-xl font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="proposal-generator" href="#">Proposal Generator 提案生成</a></nav><div class="flex items-center gap-space-md pl-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-secondary/10 shadow-[0_0_12px_rgba(65,221,194,0.15)]"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-code-sm text-label-code-sm text-secondary font-medium tracking-wide uppercase">LLM Powered</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-[120px] w-60 bg-surface-container-low z-40 flex flex-col p-space-md overflow-y-auto"><div class="mb-space-md"><div class="flex items-center justify-between"><span class="font-label-code-sm text-label-code-sm uppercase tracking-wider text-on-surface-variant font-semibold">Quick Pick · NBCU 热门影片</span><span class="material-symbols-outlined text-outline text-[16px]">movie</span></div><p class="font-body-sm text-body-sm text-outline mt-0.5">Click to populate film</p></div><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-high text-on-surface shadow-[0_8px_24px_-4px_rgba(79,107,255,0.12)] cursor-pointer"><div class="w-10 h-14 rounded bg-secondary-container/30 flex-shrink-0 flex items-center justify-center font-label-code-sm text-secondary font-bold text-center leading-none">WKD<br/>24</div><div class="min-w-0 flex-1"><div class="font-headline-sm text-headline-sm text-on-surface truncate">Wicked</div><div class="flex items-center gap-space-xs mt-0.5"><span class="font-label-code-sm text-label-code-sm text-on-surface-variant">2024</span><span class="px-1.5 py-0.5 rounded font-label-code-sm text-[10px] bg-secondary/15 text-secondary">Fantasy</span></div></div><span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span></div><div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer"><div class="w-10 h-14 rounded bg-tertiary-container/30 flex-shrink-0 flex items-center justify-center font-label-code-sm text-tertiary font-bold text-center leading-none">DM4<br/>24</div><div class="min-w-0 flex-1"><div class="font-headline-sm text-headline-sm truncate">Despicable Me 4</div><div class="flex items-center gap-space-xs mt-0.5"><span class="font-label-code-sm text-label-code-sm text-outline">2024</span><span class="px-1.5 py-0.5 rounded font-label-code-sm text-[10px] bg-surface-variant text-on-surface-variant">Animation</span></div></div></div><div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer"><div class="w-10 h-14 rounded bg-primary-container/30 flex-shrink-0 flex items-center justify-center font-label-code-sm text-primary font-bold text-center leading-none">FX<br/>23</div><div class="min-w-0 flex-1"><div class="font-headline-sm text-headline-sm truncate">Fast X</div><div class="flex items-center gap-space-xs mt-0.5"><span class="font-label-code-sm text-label-code-sm text-outline">2023</span><span class="px-1.5 py-0.5 rounded font-label-code-sm text-[10px] bg-surface-variant text-on-surface-variant">Action</span></div></div></div><div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer"><div class="w-10 h-14 rounded bg-surface-variant flex-shrink-0 flex items-center justify-center font-label-code-sm text-on-surface-variant font-bold text-center leading-none">JWD<br/>22</div><div class="min-w-0 flex-1"><div class="font-headline-sm text-headline-sm truncate">Jurassic World D.</div><div class="flex items-center gap-space-xs mt-0.5"><span class="font-label-code-sm text-label-code-sm text-outline">2022</span><span class="px-1.5 py-0.5 rounded font-label-code-sm text-[10px] bg-surface-variant text-on-surface-variant">Sci-Fi</span></div></div></div><div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer"><div class="w-10 h-14 rounded bg-error-container/30 flex-shrink-0 flex items-center justify-center font-label-code-sm text-error font-bold text-center leading-none">M3G<br/>23</div><div class="min-w-0 flex-1"><div class="font-headline-sm text-headline-sm truncate">M3GAN</div><div class="flex items-center gap-space-xs mt-0.5"><span class="font-label-code-sm text-label-code-sm text-outline">2023</span><span class="px-1.5 py-0.5 rounded font-label-code-sm text-[10px] bg-surface-variant text-on-surface-variant">Horror</span></div></div></div></div></aside><div class="pl-60"><main class="relative pt-16 pb-[120px] min-h-screen bg-background px-margin-lg py-margin-md"><div class="flex flex-col w-full">
+<!-- Interactive Navigation State Controller Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Synchronize App Shell top navigation active indicator to Competitor Tracker
+      const navLinks = document.querySelectorAll('header nav a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'competitor-tracker') {
+          link.className = 'px-space-md py-1.5 rounded-xl font-label-ui text-label-ui bg-surface-container-high text-primary shadow-sm';
+        } else {
+          link.className = 'px-space-md py-1.5 rounded-xl font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors';
+        }
+      });
+    });
+
+    function filterByStudio(studio, btn) {
+      document.querySelectorAll('.studio-filter-btn').forEach(b => {
+        b.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-md');
+        b.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      });
+      btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+      btn.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-md');
+      
+      const cards = document.querySelectorAll('.campaign-card');
+      cards.forEach(card => {
+        if (studio === 'all' || card.getAttribute('data-studio') === studio) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function toggleExecutiveDigest() {
+      const drawer = document.getElementById('strategic-drawer');
+      drawer.classList.toggle('hidden');
+    }
+  </script>
+<!-- Main View Container -->
+<div class="flex flex-col gap-space-lg w-full">
+<!-- Header & Intel Command Bar -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<!-- Title & Live Meta -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm z-10">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-code-sm text-label-code-sm uppercase tracking-wider text-secondary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+              Studio Intelligence Network
+            </span>
+<span class="text-outline text-label-code-sm">•</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">Q3-Q4 Live Audit</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Competitor Partnership Tracker · 竞品联名动态</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-4xl">
+            Real-time surveillance of Disney, Warner Bros, Paramount &amp; Sony studio brand alliances, commercial deal structures, and global theatrical co-promotions.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-center">
+<button class="px-space-md py-2 rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface flex items-center gap-space-xs font-label-ui text-label-ui transition-all shadow-sm" onclick="toggleExecutiveDigest()">
+<span class="material-symbols-outlined text-primary text-[18px]">analytics</span>
+<span>NBCU Comparative Digest</span>
+</button>
+<div class="px-space-sm py-1.5 rounded-xl bg-surface-container-highest flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface">48 Deals Indexed</span>
+</div>
+</div>
+</div>
+<!-- Segmented Studio Selector Ribbon -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 z-10">
+<button class="studio-filter-btn px-space-md py-2 rounded-xl font-label-ui text-label-ui flex items-center gap-space-xs bg-primary-container text-on-primary-container shadow-md transition-all flex-shrink-0" onclick="filterByStudio('all', this)">
+<span>All Studios</span>
+<span class="px-1.5 py-0.2 rounded-full font-label-code-sm text-[10px] bg-on-primary-container/20 text-on-primary-container font-semibold">48</span>
+</button>
+<button class="studio-filter-btn px-space-md py-2 rounded-xl font-label-ui text-label-ui flex items-center gap-space-xs bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all flex-shrink-0" onclick="filterByStudio('disney', this)">
+<span>Disney Consumer Products</span>
+<span class="px-1.5 py-0.2 rounded-full font-label-code-sm text-[10px] bg-surface-variant text-on-surface-variant font-semibold">18</span>
+</button>
+<button class="studio-filter-btn px-space-md py-2 rounded-xl font-label-ui text-label-ui flex items-center gap-space-xs bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all flex-shrink-0" onclick="filterByStudio('warner', this)">
+<span>Warner Bros. Discovery</span>
+<span class="px-1.5 py-0.2 rounded-full font-label-code-sm text-[10px] bg-surface-variant text-on-surface-variant font-semibold">14</span>
+</button>
+<button class="studio-filter-btn px-space-md py-2 rounded-xl font-label-ui text-label-ui flex items-center gap-space-xs bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all flex-shrink-0" onclick="filterByStudio('paramount', this)">
+<span>Paramount Pictures</span>
+<span class="px-1.5 py-0.2 rounded-full font-label-code-sm text-[10px] bg-surface-variant text-on-surface-variant font-semibold">9</span>
+</button>
+<button class="studio-filter-btn px-space-md py-2 rounded-xl font-label-ui text-label-ui flex items-center gap-space-xs bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all flex-shrink-0" onclick="filterByStudio('sony', this)">
+<span>Sony Pictures</span>
+<span class="px-1.5 py-0.2 rounded-full font-label-code-sm text-[10px] bg-surface-variant text-on-surface-variant font-semibold">7</span>
+</button>
+</div>
+<!-- Secondary Filters & Timeline Scrubber Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs bg-surface-container/60 p-space-sm rounded-xl">
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-1.5 font-label-code-sm text-label-code-sm text-outline">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>TIME WINDOW:</span>
+</div>
+<div class="flex items-center bg-surface-container-low p-0.5 rounded-lg">
+<button class="px-space-sm py-1 rounded font-label-ui text-label-ui bg-surface-container-high text-primary font-medium">Past 90 Days</button>
+<button class="px-space-sm py-1 rounded font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors">Past 6 Months</button>
+<button class="px-space-sm py-1 rounded font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors">Upcoming 2025</button>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-1.5 font-label-code-sm text-label-code-sm text-outline">
+<span class="material-symbols-outlined text-[16px]">category</span>
+<span>CATEGORY:</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-1 rounded-full bg-primary/10 text-primary font-label-code-sm text-label-code-sm">All Types</span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-code-sm text-label-code-sm hover:bg-surface-container-high cursor-pointer transition-colors">Promo / QSR</span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-code-sm text-label-code-sm hover:bg-surface-container-high cursor-pointer transition-colors">Merchandise</span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-code-sm text-label-code-sm hover:bg-surface-container-high cursor-pointer transition-colors">Experiential</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Collapsible Executive Strategic Digest -->
+<div class="bg-surface-container p-space-md rounded-xl shadow-lg flex flex-col gap-space-sm" id="strategic-drawer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">lightbulb</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">NBCU Executive Takeaway Summary</span>
+<span class="px-2 py-0.5 rounded font-label-code-sm text-[10px] bg-tertiary/15 text-tertiary font-bold tracking-wider uppercase">Strategic memo</span>
+</div>
+<button class="text-outline hover:text-on-surface" onclick="toggleExecutiveDigest()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded-xl">
+<span class="font-label-code-sm text-label-code-sm text-secondary uppercase font-semibold">Animation &amp; Family Slates</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Disney's 4-month lead time for Moana 2 confectionery indicates our Illumination team should lock 2025 Easter confectionery partner slots immediately.</p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl">
+<span class="font-label-code-sm text-label-code-sm text-primary uppercase font-semibold">Seasonal QSR Lock-outs</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Transformers One saturating McDonald's globally signals strong windowing space in Burger King, Wendy's, and Subway for upcoming DreamWorks properties.</p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl">
+<span class="font-label-code-sm text-label-code-sm text-tertiary uppercase font-semibold">Elevated / Mature Co-Branding</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Deadpool 0.0 alcohol and Joker high-fashion alignments confirm appetite for mature crossover storytelling applicable to Wicked and Fast franchise.</p>
+</div>
+</div>
+</div>
+<!-- Active Timeline Feed (5 Detailed Case Studies) -->
+<div class="flex flex-col gap-space-md">
+<!-- Case Study 1: Disney · Moana 2 × Hawaiian Host -->
+<article class="campaign-card bg-surface-container rounded-xl shadow-md overflow-hidden hover:bg-surface-container-high transition-colors" data-studio="disney">
+<div class="p-space-lg flex flex-col lg:flex-row gap-space-lg">
+<!-- Left Timeline & Visual Slate Anchor -->
+<div class="lg:w-72 flex-shrink-0 flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code-lg text-label-code-lg text-primary font-bold">Aug 2024</span>
+<span class="px-2 py-0.5 rounded-full font-label-code-sm text-[10px] bg-secondary/15 text-secondary flex items-center gap-1 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Live In-Market
+                </span>
+</div>
+<div class="h-44 w-full rounded-xl overflow-hidden relative shadow-inner mt-space-xs bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Vibrant tropical retail display showcasing Hawaiian Host chocolates with Moana 2 Polynesian inspired artwork and packaging in a modern supermarket setting under warm cinematic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMFEdL6_eV88Q5xaZig30u3OGlgLSlvcVkq2s7WbFyRH332lkQoF_g-FM5JEKRduknBNu6GyE1D68xy5SJEu5o0SUPbrEENrb8DjJMYgJHYEDESrxZhqYoiDDLVGlHqR1Wp3BiA8CZGoT69J-5oNrYKtG5zxapaH-9yGJ5QDFYw0tKcTp-0_2VjvA0xlMJwzoJ3T8aLQvGFiuIPyxbAWtmr9AUH5RluvPb-NAWINVez3MFUdLfj_Ry"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/85 backdrop-blur-md px-2 py-1 rounded font-label-code-sm text-[11px] text-on-surface font-semibold">
+                  Target &amp; Costco Exclusive
+                </div>
+</div>
+</div>
+<div class="mt-space-sm flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container-highest flex items-center justify-center font-label-code-sm text-outline text-[10px] font-bold">DIS</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Disney Consumer Products</span>
+</div>
+</div>
+<!-- Main Dossier Content -->
+<div class="flex-1 flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex flex-wrap items-center gap-space-xs mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full font-label-code-sm text-label-code-sm bg-primary/10 text-primary font-medium">Merchandise &amp; Retail</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">• Theatrical Alignment</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Disney · Moana 2 × Hawaiian Host</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                Co-branded tropical chocolate boxes, limited retail shelf displays at Target &amp; Costco, paired with an integrated consumer sweepstakes for an all-expenses-paid Hawaii vacation package.
+              </p>
+</div>
+<!-- Key Metric Visual Strip -->
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div>
+<span class="font-label-code-sm text-label-code-sm text-outline block">EST. MEDIA IMPRESSIONS</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold tracking-tight">120M+ Impressions</span>
+</div>
+<div class="h-6 w-px bg-surface-variant hidden sm:block"></div>
+<div>
+<span class="font-label-code-sm text-label-code-sm text-outline block">PHYSICAL DISTRIBUTION</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">4,200 Retail Doors</span>
+</div>
+</div>
+<div class="flex items-center gap-1 font-label-code-sm text-[11px] text-on-surface-variant bg-surface-container px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[14px]">storefront</span>
+<span>F&amp;B Shelf Real Estate Takeover</span>
+</div>
+</div>
+<!-- Competitive Strategic Takeaway for NBCU -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex items-start gap-space-sm">
+<div class="p-1 rounded bg-secondary/10 text-secondary mt-0.5 flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">flag</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="font-label-code-sm text-label-code-sm text-secondary uppercase font-semibold tracking-wider">NBCU Counter Strategy</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+                  Direct competition to Universal family holiday animation slate. Note their aggressive 4-month QSR/Confectionery retail lock before theatrical premiere. Recommend locking Illumination seasonal treats by Q1.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Case Study 2: Warner Bros. · Beetlejuice Beetlejuice × Fanta (Coca-Cola) -->
+<article class="campaign-card bg-surface-container rounded-xl shadow-md overflow-hidden hover:bg-surface-container-high transition-colors" data-studio="warner">
+<div class="p-space-lg flex flex-col lg:flex-row gap-space-lg">
+<!-- Left Timeline & Visual Slate Anchor -->
+<div class="lg:w-72 flex-shrink-0 flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code-lg text-label-code-lg text-primary font-bold">Jul 2024</span>
+<span class="px-2 py-0.5 rounded-full font-label-code-sm text-[10px] bg-surface-variant text-on-surface-variant flex items-center gap-1 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Completed
+                </span>
+</div>
+<div class="h-44 w-full rounded-xl overflow-hidden relative shadow-inner mt-space-xs bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Monochrome black and white striped limited edition soda cans with neon green and purple Beetlejuice characters, illuminated under atmospheric moody theater lighting with mist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNHielBf58GweMPkxzqr-UQa-MYbBDcqeAH87r59iA91LD5fJXkntsxabxukcnJ8gBMCHOKWPBDTvA0Ud1tTkjdQNgXM1rJK2HcC1XH02mMoo4eEt0d6ajqnA-kW40yE7SafeQ9q0R-muTVGDop5eu69IsImThNy8vOrxbmBsRF365mqW2LScl7v0stBEbiPzTUhUZ9OROf8QQDylPuNxazOviwxR3NoZQZhEPcnHWANg-CIhEc6_p"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/85 backdrop-blur-md px-2 py-1 rounded font-label-code-sm text-[11px] text-on-surface font-semibold">
+                  50+ Global Markets
+                </div>
+</div>
+</div>
+<div class="mt-space-sm flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container-highest flex items-center justify-center font-label-code-sm text-outline text-[10px] font-bold">WBD</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Warner Bros. Discovery</span>
+</div>
+</div>
+<!-- Main Dossier Content -->
+<div class="flex-1 flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex flex-wrap items-center gap-space-xs mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full font-label-code-sm text-label-code-sm bg-secondary/15 text-secondary font-medium">Global Promo / Packaging</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">• Fast-Moving Consumer Goods</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Warner Bros. · Beetlejuice Beetlejuice × Fanta (Coca-Cola)</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                Custom limited-edition black-and-white striped soda cans featuring character artwork, interactive AR portal accessible directly on packaging, and a coordinated global retail rollout spanning 50+ countries.
+              </p>
+</div>
+<!-- Key Metric Visual Strip -->
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div>
+<span class="font-label-code-sm text-label-code-sm text-outline block">VIRAL SOCIAL PERFORMANCE</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold tracking-tight">#1 Halloween Brand on TikTok</span>
+</div>
+<div class="h-6 w-px bg-surface-variant hidden sm:block"></div>
+<div>
+<span class="font-label-code-sm text-label-code-sm text-outline block">PACKAGING PENETRATION</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Global F&amp;B Scale</span>
+</div>
+</div>
+<div class="flex items-center gap-1 font-label-code-sm text-[11px] text-on-surface-variant bg-surface-container px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-[14px]">qr_code_scanner</span>
+<span>AR Portal Activated</span>
+</div>
+</div>
+<!-- Competitive Strategic Takeaway for NBCU -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex items-start gap-space-sm">
+<div class="p-1 rounded bg-primary/10 text-primary mt-0.5 flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="font-label-code-sm text-label-code-sm text-primary uppercase font-semibold tracking-wider">Blumhouse / Universal Application</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+                  Strong operational precedent for M3GAN 2.0 and Blumhouse horror-comedy seasonal partnerships. Proves packaged beverage cans drive viral unboxings among Gen Z when visual design leans fully into IP aesthetics.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Case Study 3: Disney · Deadpool & Wolverine × Heineken 0.0 -->
+<article class="campaign-card bg-surface-container rounded-xl shadow-md overflow-hidden hover:bg-surface-container-high transition-colors" data-studio="disney">
+<div class="p-space-lg flex flex-col lg:flex-row gap-space-lg">
+<!-- Left Timeline & Visual Slate Anchor -->
+<div class="lg:w-72 flex-shrink-0 flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code-lg text-label-code-lg text-primary font-bold">May 2024</span>
+<span class="px-2 py-0.5 rounded-full font-label-code-sm text-[10px] bg-surface-variant text-on-surface-variant flex items-center gap-1 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Completed
+                </span>
+</div>
+<div class="h-44 w-full rounded-xl overflow-hidden relative shadow-inner mt-space-xs bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Cinematic production still style shot of a customized beer bottle placed on a gritty stainless steel counter next to red and yellow superhero gauntlets, with atmospheric high-contrast studio backlighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLywW92T0jvbH_p5xfpkeNDSayvvUMBbeDmyIpdmObpuiZIFA7wc7xNIxqjmNgU-bmOdh4hNOPzwHMd_ZH0IerYBzGpIl3Dp7AqF6OFKmEnkUXBUiRe1zTFoWnLLYCOQ6muICAw_xK7Vgswtr12ybrecGxw4vOBr1YFagSYSKv48umeQQfoHwPP13M1IgNwar5Y3QtYIfasRWdn6ybCAoYr9JcUOH127EbYYrR8IcUwbZu3CMj_OxS"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/85 backdrop-blur-md px-2 py-1 rounded font-label-code-sm text-[11px] text-on-surface font-semibold">
+                  Broadcast + Paid Social
+                </div>
+</div>
+</div>
+<div class="mt-space-sm flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container-highest flex items-center justify-center font-label-code-sm text-outline text-[10px] font-bold">DIS</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Disney / Marvel Studios</span>
+</div>
+</div>
+<!-- Main Dossier Content -->
+<div class="flex-1 flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex flex-wrap items-center gap-space-xs mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full font-label-code-sm text-label-code-sm bg-tertiary/15 text-tertiary font-medium">Co-Branded TV Spot &amp; Digital</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">• Non-Alcoholic Beverage</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Disney · Deadpool &amp; Wolverine × Heineken 0.0</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                High-budget custom filmed commercial featuring Ryan Reynolds and Hugh Jackman in-character, using deadpan humor and meta fourth-wall breaking integration to navigate R-rated IP constraints.
+              </p>
+</div>
+<!-- Key Metric Visual Strip -->
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div>
+<span class="font-label-code-sm text-label-code-sm text-outline block">DIGITAL VELOCITY</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold tracking-tight">45M Views (72 Hours)</span>
+</div>
+<div class="h-6 w-px bg-surface-variant hidden sm:block"></div>
+<div>
+<span class="font-label-code-sm text-label-code-sm text-outline block">AUDIENCE EFFECTIVENESS</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">+38% Brand Recall Lift</span>
+</div>
+</div>
+<div class="flex items-center gap-1 font-label-code-sm text-[11px] text-on-surface-variant bg-surface-container px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[14px]">videocam</span>
+<span>Bespoke Talent Spot</span>
+</div>
+</div>
+<!-- Competitive Strategic Takeaway for NBCU -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex items-start gap-space-sm">
+<div class="p-1 rounded bg-secondary/10 text-secondary mt-0.5 flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="font-label-code-sm text-label-code-sm text-secondary uppercase font-semibold tracking-wider">Fast &amp; Furious Benchmark</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+                  Sets the industry gold standard for mature IP deals where non-alcoholic extensions allow premium beverage brands to participate safely. Model this for Fast &amp; Furious franchise talent integrations.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Case Study 4: Warner Bros. · Joker: Folie à Deux × YSL Beauty -->
+<article class="campaign-card bg-surface-container rounded-xl shadow-md overflow-hidden hover:bg-surface-container-high transition-colors" data-studio="warner">
+<div class="p-space-lg flex flex-col lg:flex-row gap-space-lg">
+<!-- Left Timeline & Visual Slate Anchor -->
+<div class="lg:w-72 flex-shrink-0 flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code-lg text-label-code-lg text-primary font-bold">Oct 2024</span>
+<span class="px-2 py-0.5 rounded-full font-label-code-sm text-[10px] bg-tertiary/15 text-tertiary flex items-center gap-1 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Upcoming Announcement
+                </span>
+</div>
+<div class="h-44 w-full rounded-xl overflow-hidden relative shadow-inner mt-space-xs bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="High-fashion luxury cosmetics editorial display with deep rouge lipsticks and dark couture palettes, bathed in warm amber and cool obsidian tones with architectural velvet podiums." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAvWR_ZVmgnRf2aeQFzWZmMIeUajtWU3fwhiatnpmcrvuTVPJDzOmI3ABIPyhNuohpw5iiXpnEhg0GljjvCCRL1wJ8__RCBLv29AjpUc_UEHSogGdDYWOys6VRXZHNJnOd56CCsGYV3iTjHx2LKw5RuBZ8I_ZhdgSd_hk_d2YAiP-7OHITMyyzQrk3bb3vn3RolFnjZkGyt6RxezLSi1XoX0nElk_SN9XhBoZnZiL7Bgs3T9V-rL6l"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/85 backdrop-blur-md px-2 py-1 rounded font-label-code-sm text-[11px] text-on-surface font-semibold">
+                  Venice / NYC / Paris
+                </div>
+</div>
+</div>
+<div class="mt-space-sm flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container-highest flex items-center justify-center font-label-code-sm text-outline text-[10px] font-bold">WBD</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Warner Bros. Discovery</span>
+</div>
+</div>
+<!-- Main Dossier Content -->
+<div class="flex-1 flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex flex-wrap items-center gap-space-xs mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full font-label-code-sm text-label-code-sm bg-primary-container/20 text-primary font-medium">Luxury &amp; Experiential</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">• High Fashion / Cosmetics</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Warner Bros. · Joker: Folie à Deux × YSL Beauty</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                Avant-garde editorial makeup collaboration, VIP red carpet glam suites at the Venice Film Festival, and bespoke boutique pop-up retail installations throughout New York and Paris.
+              </p>
+</div>
+<!-- Key Metric Visual Strip -->
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div>
+<span class="font-label-code-sm text-label-code-sm text-outline block">TARGET DEMOGRAPHIC FOCUS</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">High-Net-Worth 25–45</span>
+</div>
+<div class="h-6 w-px bg-surface-variant hidden sm:block"></div>
+<div>
+<span class="font-label-code-sm text-label-code-sm text-outline block">EARNED MEDIA INDEX</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold tracking-tight">Top Tier Fashion PR</span>
+</div>
+</div>
+<div class="flex items-center gap-1 font-label-code-sm text-[11px] text-on-surface-variant bg-surface-container px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-[14px]">diamond</span>
+<span>VIP Red Carpet Suites</span>
+</div>
+</div>
+<!-- Competitive Strategic Takeaway for NBCU -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex items-start gap-space-sm">
+<div class="p-1 rounded bg-tertiary/10 text-tertiary mt-0.5 flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="font-label-code-sm text-label-code-sm text-tertiary uppercase font-semibold tracking-wider">Wicked Luxury Positioning</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+                  Directly informs NBCU's strategy for <span class="text-on-surface font-semibold">Wicked</span>. We can position Glinda/Elphaba beauty lines in luxury fragrance/cosmetics (e.g., Prada Beauty, Chanel) rather than mass-market drugstore aisles.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Case Study 5: Paramount · Transformers One × McDonald's -->
+<article class="campaign-card bg-surface-container rounded-xl shadow-md overflow-hidden hover:bg-surface-container-high transition-colors" data-studio="paramount">
+<div class="p-space-lg flex flex-col lg:flex-row gap-space-lg">
+<!-- Left Timeline & Visual Slate Anchor -->
+<div class="lg:w-72 flex-shrink-0 flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code-lg text-label-code-lg text-primary font-bold">Jun 2024</span>
+<span class="px-2 py-0.5 rounded-full font-label-code-sm text-[10px] bg-secondary/15 text-secondary flex items-center gap-1 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Live In-Market
+                </span>
+</div>
+<div class="h-44 w-full rounded-xl overflow-hidden relative shadow-inner mt-space-xs bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Modern high-tech McDonald's Happy Meal packaging with converting Cybertronian robot action figures laid out on sleek dark matte surface with glowing red and blue LED reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw1CTPN_OndeUX3oulgfKSo9xcNE2ow3yTpC4rYMOBFSZzMljdOHj6dudVosB1WXWxrS4IF19WRRvfB5dprkpKXym9CtDWj_uIuRzy2n4dDSwUjKbzKUMEEYJ-m_UYihW9pmbNN9o_xq6s3BqGFyECKV8bMVLlGSNQTNbKglrOMJCM8y5RfTeHdd1iyQWey45XV3nk-kOxm1NQ-1_WqF9mlzyLaTshmVKKwtEcmLvYNuKKXJmYUc3w"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/85 backdrop-blur-md px-2 py-1 rounded font-label-code-sm text-[11px] text-on-surface font-semibold">
+                  14,000+ Stores Worldwide
+                </div>
+</div>
+</div>
+<div class="mt-space-sm flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container-highest flex items-center justify-center font-label-code-sm text-outline text-[10px] font-bold">PAR</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Paramount Pictures</span>
+</div>
+</div>
+<!-- Main Dossier Content -->
+<div class="flex-1 flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex flex-wrap items-center gap-space-xs mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full font-label-code-sm text-label-code-sm bg-secondary/15 text-secondary font-medium">Happy Meal &amp; Global QSR</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">• Worldwide Scale</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Paramount · Transformers One × McDonald's</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                Collectable converting action figure toys across 14,000 locations globally, accompanied by proprietary McDonald's mobile app mini-game integration and complete drive-thru digital signage takeovers.
+              </p>
+</div>
+<!-- Key Metric Visual Strip -->
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div>
+<span class="font-label-code-sm text-label-code-sm text-outline block">PHYSICAL TOY VOLUME</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold tracking-tight">30M+ Units Globally</span>
+</div>
+<div class="h-6 w-px bg-surface-variant hidden sm:block"></div>
+<div>
+<span class="font-label-code-sm text-label-code-sm text-outline block">FOOTPRINT PENETRATION</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">14,000+ Restaurants</span>
+</div>
+</div>
+<div class="flex items-center gap-1 font-label-code-sm text-[11px] text-on-surface-variant bg-surface-container px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[14px]">fastfood</span>
+<span>Drive-Thru Takeover</span>
+</div>
+</div>
+<!-- Competitive Strategic Takeaway for NBCU -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex items-start gap-space-sm">
+<div class="p-1 rounded bg-secondary/10 text-secondary mt-0.5 flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">hotel_class</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="font-label-code-sm text-label-code-sm text-secondary uppercase font-semibold tracking-wider">NBCU Illumination Comparison</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+                  Direct benchmark for <span class="text-on-surface font-semibold">Despicable Me 4 / Minions</span> activations. McDonald's toy unit velocity remains unmatched; NBCU should preserve its primary global Tier-1 fast food lock-in for next year's slate.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Comparative Matrix Visual Widget -->
+<div class="bg-surface-container p-space-lg rounded-xl shadow-md flex flex-col gap-space-md mt-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-code-sm text-label-code-sm text-secondary font-semibold uppercase tracking-wider">Studio Market Share Breakdown</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Brand Partnership Category Penetration (Past 90 Days)</h3>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-outline">Updated 2h ago</span>
+</div>
+<!-- Segmented Visual Bar Comparison -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md pt-space-xs">
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-on-surface">Disney</span>
+<span class="font-label-code-sm text-label-code-sm text-primary font-bold">37.5%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 37.5%"></div>
+</div>
+<span class="font-body-sm text-body-sm text-outline mt-1">Lead: CPG Retail &amp; F&amp;B</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-on-surface">Warner Bros.</span>
+<span class="font-label-code-sm text-label-code-sm text-secondary font-bold">29.1%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 29.1%"></div>
+</div>
+<span class="font-body-sm text-body-sm text-outline mt-1">Lead: Experiential &amp; FMCG</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-on-surface">Paramount</span>
+<span class="font-label-code-sm text-label-code-sm text-tertiary font-bold">18.7%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 18.7%"></div>
+</div>
+<span class="font-body-sm text-body-sm text-outline mt-1">Lead: Mega-QSR Partnerships</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-on-surface">Sony</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant font-bold">14.7%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-surface-variant h-full rounded-full" style="width: 14.7%"></div>
+</div>
+<span class="font-body-sm text-body-sm text-outline mt-1">Lead: Consumer Tech &amp; Gaming</span>
+</div>
+</div>
+</div>
+</div>
+</div></main></div><footer class="fixed bottom-0 left-0 right-0 h-[120px] bg-surface-container-lowest/95 backdrop-blur-xl z-50 px-margin-lg py-space-sm flex flex-col justify-between shadow-[0_-1px_12px_rgba(0,0,0,0.35)]"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[16px]">insights</span><span class="font-label-code-sm text-label-code-sm uppercase tracking-wider text-on-surface font-semibold">Industry Pulse · 近期联名资讯</span></div><span class="font-label-code-sm text-label-code-sm text-outline">Live Intelligence Feed</span></div><div class="grid grid-cols-1 md:grid-cols-3 gap-space-md"><div class="p-space-sm rounded-xl bg-surface-container-low flex items-start gap-space-sm"><div class="w-2 h-2 rounded-full bg-primary mt-1.5 flex-shrink-0"></div><div class="min-w-0 flex-1"><div class="font-label-ui text-label-ui text-on-surface font-medium truncate">Warner Bros. × Fast Food</div><p class="font-body-sm text-body-sm text-on-surface-variant truncate">Q3 Co-branded combo meals &amp; digital toys</p></div></div><div class="p-space-sm rounded-xl bg-surface-container-low flex items-start gap-space-sm"><div class="w-2 h-2 rounded-full bg-secondary mt-1.5 flex-shrink-0"></div><div class="min-w-0 flex-1"><div class="font-label-ui text-label-ui text-on-surface font-medium truncate">Disney Consumer Products</div><p class="font-body-sm text-body-sm text-on-surface-variant truncate">Partnership volume up 24% YoY across lifestyle</p></div></div><div class="p-space-sm rounded-xl bg-surface-container-low flex items-start gap-space-sm"><div class="w-2 h-2 rounded-full bg-tertiary mt-1.5 flex-shrink-0"></div><div class="min-w-0 flex-1"><div class="font-label-ui text-label-ui text-on-surface font-medium truncate">Paramount × Beauty Brands</div><p class="font-body-sm text-body-sm text-on-surface-variant truncate">Halloween IP collaboration forecast</p></div></div></div></footer></body></html>

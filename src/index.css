@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  font-feature-settings: 'cv11', 'ss01';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: theme('fontFamily.sans');
+  background-color: theme('colors.surface');
+  color: theme('colors.ink');
+}
+
+/* 视觉表达卡 v1：一致的卡片轻边 + 细焦点环 */
+@layer components {
+  .card {
+    @apply rounded-card border border-line bg-surface shadow-card transition-all duration-150;
+  }
+  .card-hover:hover {
+    @apply border-line-strong shadow-card-hover -translate-y-[1px];
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-card bg-brand px-4 py-2 text-sm font-medium text-white shadow-card transition-colors duration-150 hover:bg-brand-hover active:bg-brand-pressed focus:outline-none focus:shadow-focus disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-card border border-line-strong bg-surface px-4 py-2 text-sm font-medium text-ink transition-colors duration-150 hover:border-brand hover:text-brand focus:outline-none focus:shadow-focus disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-card px-3 py-1.5 text-sm font-medium text-ink-muted transition-colors duration-150 hover:bg-surface-muted hover:text-ink focus:outline-none focus:shadow-focus;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-chip bg-surface-muted px-2.5 py-1 text-[11px] font-medium tracking-wide text-ink-muted;
+  }
+  .chip-active {
+    @apply bg-brand text-white;
+  }
+  .input {
+    @apply w-full rounded-card border border-line-strong bg-surface px-4 py-2.5 text-sm text-ink placeholder:text-ink-faint transition-colors duration-150 focus:border-brand focus:outline-none focus:shadow-focus;
+  }
+  .divider {
+    @apply h-px w-full bg-line;
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* 进度条动画（品牌匹配页用） */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.progress-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 113, 227, 0.15) 0%,
+    rgba(0, 113, 227, 0.45) 50%,
+    rgba(0, 113, 227, 0.15) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s linear infinite;
+}
+
+/* 细滚动条 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d1d6;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a6;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
